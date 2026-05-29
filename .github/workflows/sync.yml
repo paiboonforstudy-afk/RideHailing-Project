@@ -1,0 +1,16 @@
+on:
+  push:
+    paths:
+      - 'data/mapping_data/**'   # only triggers when mapping files change
+
+jobs:
+  sync-to-adls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: bacongobbler/azure-blob-storage-upload@main
+        with:
+          source_dir: data/mapping_data
+          container_name: ride-hailing-lake
+          connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          overwrite: true
