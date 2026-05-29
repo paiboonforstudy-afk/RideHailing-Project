@@ -13,4 +13,5 @@ jobs:
           source_dir: data/mapping_data
           container_name: ride-hailing-lake
           connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-          overwrite: true
+          overwrite: 'true'
+          extra_args: '--destination-path mapping_data'
