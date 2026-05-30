@@ -52,5 +52,14 @@
     "base_rate": 150.00,
     "per_km": 20.00,
     "per_minute": 5.00
+  },
+  {
+    "ride_option_id": 7,
+    "ride_option_name": "WAV",
+    "vehicle_class": "Wheelchair-Accessible Vehicle",
+    "passenger_capacity": 10,
+    "base_rate": 150.00,
+    "per_km": 20.00,
+    "per_minute": 5.00
   }
 ]
